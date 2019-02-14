@@ -1,0 +1,27 @@
+<div class="padding-zone">
+  <h2 class="text-white">Users Location</h2>
+  <div class="table-responsive">
+    <table class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th>Latitude</th>
+          <th>Longitude</th>
+          <th>Number</th>
+          <th>Detection Time</th>
+          <th>Send Offer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users$ | async"><!-- *ngFor="let item of order.tray; let i =index" -->
+          <td>{{ user.location.latitude }}</td>
+          <td>{{ user.location.longitude }}</td>
+          <td>{{ user.phone_number }}</td>
+          <td>{{ user.detection_time }}</td>
+          <td><button [routerLink]="['/offers', user.phone_number]" class="btn btn-sm btn-success">Send Offers</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <hr>
+  </div>
+</div>
+

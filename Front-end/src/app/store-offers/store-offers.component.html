@@ -1,0 +1,23 @@
+<div class="padding-zone">
+  <div class="padding-2">
+    <h2 class="text-white inliner">Offers Active</h2>
+    <button routerLink="/offer-form" class="btn btn-success float-right">Add Offer</button>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th>Offer</th>
+          <th>Message</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let offer of offers$ | async"><!-- *ngFor="let item of order.tray; let i =index" -->
+          <td>{{ offer.offerName }}</td>
+          <td>{{ offer.message }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr>
+  </div>
+</div>

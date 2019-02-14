@@ -1,0 +1,20 @@
+<div class="padding-zone">
+  <form #f="ngForm" (ngSubmit)="saveOffer(f.value)">
+    <label for="offerName" class="text-white">Offer Name</label>
+    <input ngModel #offerName="ngModel" name="offerName" id="offerName" type="text" required class="form-group form-control">
+    <div *ngIf="!offerName.valid && offerName.touched" class="alert alert-warning">
+      <p>Offer name is a required field</p>
+    </div>
+    <label for="message" class="text-white">Message</label>
+    <textarea ngModel #message="ngModel" name="message" id="message" type="Text" required class="form-group form-control" rows="10" cols="100"></textarea>
+    <div *ngIf="!message.valid && message.touched" class="alert alert-warning">
+      <p>Message is a required field</p>
+    </div>
+    <div *ngIf="f.valid" class="text-right">
+      <button type="submit" class="btn btn-success">Save</button>
+    </div>
+    <div *ngIf="!f.valid" class="text-right">
+      <button disabled submit class="btn btn-success">Save</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,12 @@
+.black-bg{
+  padding: 0.5%;
+  background-color:#047925;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  z-index: 10;
+}
+.black{
+  background-color: black;
+  min-height: 600px;
+}

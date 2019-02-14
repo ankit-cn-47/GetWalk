@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+.white-text{
+  color:white;
+}
+.inliner{
+  display: inline;
+}
+.padding-2{
+  padding: 2%;
+}
+.padding-zone{
+  padding: 10% 8% 8% 8%;
+}
+@media only screen and (max-width: 450px) {
+  .padding-zone {
+    padding: 20% 8% 8% 8%;
+  }
+}
